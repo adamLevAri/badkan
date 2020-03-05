@@ -2,10 +2,10 @@
 
 CFLAGS=-stdlib=libc++ -std=c++11
 
-demo: Demo.o FamilyTree.o node.o
+demo: Demo.o node.o FamilyTree.o
 	g++ $(CFLAGS) $^ -o demo
 
-test: badkan.o FamilyTree.o node.o
+test: badkan.o node.o FamilyTree.o
 	g++ $(CFLAGS) $^ -o test
 
 %.o: %.cpp
