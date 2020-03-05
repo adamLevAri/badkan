@@ -12,9 +12,9 @@ test: badkan.o node.o FamilyTree.o
 	g++ $(CFLAGS) -c $< -o $@
 	
 
-node.o: node.cpp node.hpp
+node.o: node.cpp node.h
 
-FamilyTree.o: FamilyTree.cpp FamilyTree.hpp
+FamilyTree.o: FamilyTree.cpp FamilyTree.h
 
 Demo.o: Demo.cpp Demo.h
 
