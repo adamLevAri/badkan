@@ -8,7 +8,7 @@
  */
 
 #include "doctest.h"
-#include "FamilyTree.hpp"
+#include "FamilyTree.h"
 using namespace ariel;
 
 TEST_CASE("Test case 1") {
