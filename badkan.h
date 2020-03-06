@@ -26,7 +26,7 @@
 #define CHECK_OUTPUT(actual,expected) check_equal([&](){ostringstream ostr; ostr<<"'"<<actual<<"'"; return ostr.str();}, "'"+string(expected)+"'", __FILE__+string(":")+to_string(__LINE__))
 #define CHECK_INPUT(actual,expected) check_input(actual, expected)
 
-#include "FamilyTree.h"
+#include "FamilyTree.hpp"
 #include <string>
 #include <iostream>
 #include <sstream>
