@@ -4,7 +4,7 @@
  * First version by Adam Lev-Ari
  */
 
-#include "FamilyTree.h"
+#include "FamilyTree.hpp"
 
 int main()
 {
