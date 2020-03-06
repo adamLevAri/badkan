@@ -1,5 +1,5 @@
 
-#include "FamilyTree.h"
+#include "FamilyTree.hpp"
 
 
 FamilyTree::FamilyTree()
