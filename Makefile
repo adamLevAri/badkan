@@ -14,7 +14,7 @@ test: badkan.o node.o FamilyTree.o
 
 node.o: node.cpp node.h
 
-FamilyTree.o: FamilyTree.cpp FamilyTree.h
+FamilyTree.o: FamilyTree.cpp FamilyTree.hpp
 
 Demo.o: Demo.cpp Demo.h
 
