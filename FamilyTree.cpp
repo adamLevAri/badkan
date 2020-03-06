@@ -1,6 +1,27 @@
 
 #include "FamilyTree.hpp"
 
+class node
+{
+public:
+
+    string name;
+    short int x; // x - height of node
+    bool g;             // g- gender
+    node* fc;           // Pointer to first child
+    node* ns;           // Pointer to next sibiling
+    node* ps;           // Pointer to previous sibiling
+    node* p;            // Pointer to parent
+    node* s;            // Pointer to spouse
+
+    node() {};
+    void setData(string personName, char gender){
+        this->name = personName;
+        if (gender == 'm' || gender == 'M')
+            g = 1;
+    }
+    ~node() {};
+};
 
 FamilyTree::FamilyTree()
 {
