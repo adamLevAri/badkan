@@ -1,24 +1,20 @@
-#!make -f
+CXX=clang++-9 
+CXXFLAGS=-std=c++2a
 
-CFLAGS=-stdlib=libc++ -std=c++11
+HEADERS=FamilyTree.hpp
+OBJECTS=FamilyTree.o
 
-demo: Demo.o node.o FamilyTree.o
-	g++ $(CFLAGS) $^ -o demo
+run: demo
+	./$^
 
-test: badkan.o node.o FamilyTree.o
-	g++ $(CFLAGS) $^ -o test
+demo: Demo.o $(OBJECTS)
+	$(CXX) $(CXXFLAGS) $^ -o demo
 
-%.o: %.cpp
-	g++ $(CFLAGS) -c $< -o $@
-	
+test: TestCounter.o Test.o o $(OBJECTS)
+	$(CXX) $(CXXFLAGS) $^ -o test
 
-node.o: node.cpp node.h
-
-FamilyTree.o: FamilyTree.cpp FamilyTree.hpp
-
-Demo.o: Demo.cpp Demo.h
-
-badkan.o: TestExample.cpp TestCounter.cpp doctest.h
+%.o: %.cpp $(HEADERS)
+	$(CXX) $(CXXFLAGS) --compile $< -o $@
 
 clean:
 	rm -f *.o demo test
