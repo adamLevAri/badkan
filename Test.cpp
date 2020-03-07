@@ -1,7 +1,7 @@
 
 #include "doctest.h"
 #include "FamilyTree.hpp"
-using namespace ariel;
+//using namespace ariel;
 
 TEST_CASE("Test case 1") {
    	FamilyTree T;
