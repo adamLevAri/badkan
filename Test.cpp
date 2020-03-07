@@ -37,5 +37,9 @@ TEST_CASE("Test case 1") {
 		CHECK(T.find("ham", "posher") == string("father"));
 		CHECK(T.find("adam", "hava") == string("husband"));
 		CHECK(T.find("adam", "posher") == string("grandfather"));
+    
+}
+
+TEST_CASE("Test case 2") {
     /* Add more tests here */
 }
