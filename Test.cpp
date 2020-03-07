@@ -19,5 +19,23 @@ int main() {
 		CHECK(T.find("ham", "posher") == string("father"));
 		CHECK(T.find("adam", "hava") == string("husband"));
 		CHECK(T.find("adam", "posher") == string("grandfather"));
+		
+		CHECK(T.findRelation("posher", 'g') == string("adam"));
+		CHECK(T.findRelation("posher", 'u') == string("yefet"));
+		CHECK(T.find("ham", "posher") == string("father"));
+		CHECK(T.find("adam", "hava") == string("husband"));
+		CHECK(T.find("adam", "posher") == string("grandfather"));
+		
+		CHECK(T.findRelation("posher", 'g') == string("adam"));
+		CHECK(T.findRelation("posher", 'u') == string("yefet"));
+		CHECK(T.find("ham", "posher") == string("father"));
+		CHECK(T.find("adam", "hava") == string("husband"));
+		CHECK(T.find("adam", "posher") == string("grandfather"));
+		
+		CHECK(T.findRelation("posher", 'g') == string("adam"));
+		CHECK(T.findRelation("posher", 'u') == string("yefet"));
+		CHECK(T.find("ham", "posher") == string("father"));
+		CHECK(T.find("adam", "hava") == string("husband"));
+		CHECK(T.find("adam", "posher") == string("grandfather"));
     /* Add more tests here */
 }
