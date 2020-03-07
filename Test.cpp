@@ -1,5 +1,6 @@
 
 #include "badkan.h"
+#include "docotest.h"
 
 int main() {
 
