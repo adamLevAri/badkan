@@ -2,8 +2,9 @@
 #include "doctest.h"
 
 int main() {
-
-	FamilyTree T;
+	
+	TEST_CASE("Test case 1") {
+   	FamilyTree T;
 
 	T.addNew("adam", 'm');
 	T.addNew("hava", 'f', 'w', "adam");
@@ -13,17 +14,10 @@ int main() {
 	T.addNew("kar", 'f', 'w', "ham");
 	T.addNew("posher", 'm', 'c', "ham");
 
-	T.find("adam", "posher");
-	T.display(T.start);
-	
-	badkan::TestCase testcase;
-	testcase.setname("My tests")
-		.CHECK_OUTPUT(T.findRelation("posher", 'g'), "adam")
-		.CHECK_OUTPUT(T.findRelation("posher", 'u'), "yefet")
-		.CHECK_OUTPUT(T.find("ham", "posher"), "father")
-		.CHECK_OUTPUT(T.find("adam", "hava"), "husband")
-		.CHECK_OUTPUT(T.find("adam", "posher"), "grandfather")
-		.print();
-
-	return 0;
+    		CHECK(T.findRelation("posher", 'g') == string("adam"));
+		CHECK(T.findRelation("posher", 'u') == string("yefet"));
+		CHECK(T.find("ham", "posher") == string("father"));
+		CHECK(T.find("adam", "hava") == string("husband"));
+		CHECK(T.find("adam", "posher") == string("grandfather"));
+    /* Add more tests here */
 }
