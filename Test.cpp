@@ -1,5 +1,5 @@
 
-#include "Test.h"
+#include "doctest.h"
 
 int main() {
 
