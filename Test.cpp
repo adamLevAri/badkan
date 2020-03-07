@@ -1,5 +1,5 @@
 
-#include "badkan.h"
+#include "Test.h"
 #include "docotest.h"
 
 int main() {
