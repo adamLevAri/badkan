@@ -27,6 +27,7 @@
 #define CHECK_INPUT(actual,expected) check_input(actual, expected)
 
 #include "FamilyTree.hpp"
+#include "doctest.hpp"
 #include <string>
 #include <iostream>
 #include <sstream>
