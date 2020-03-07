@@ -1,9 +1,9 @@
 
 #include "doctest.h"
+#include "FamilyTree.hpp"
+using namespace ariel;
 
-int main() {
-	
-	TEST_CASE("Test case 1") {
+TEST_CASE("Test case 1") {
    	FamilyTree T;
 
 	T.addNew("adam", 'm');
